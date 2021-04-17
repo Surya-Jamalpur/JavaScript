@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            let x = [10,8,3,4,6,-1,-9.2,-55,78,96,100];
+            let min = x[0];
+            let max = x[0];
+            for(let i = 0; i<x.length; i++){
+                let currentItem = x[i];
+                if(min > currentItem ) min = currentItem;
+                if(max < currentItem ) max = currentItem;
+            }
+        //    let y = Math.max(x)
+            // console.log(y);
+            console.log(min, max);
+
+// attaching 2 arrays as 1
+let a1 = [1,2,3,4,5];
+let a2 = ['6,8,9,7'];
+console.log(Math.max(1,2,3,4,5));
+
+        </script>
+    </head>
+</html>
