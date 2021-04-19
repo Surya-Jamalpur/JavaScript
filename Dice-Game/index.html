@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dice.css">
+    <title>Dice Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="player-1" class="player active">
+            <div class="tsBlock">
+                <h1 class="tag1">Player 1</h1>
+                <div class="totalScore" id="p0TotalScore">###</div>
+            </div>
+            <div class="csBlock">
+                <h4>Current</h4>
+                <div class="currentScore" id="p0CurrentScore">0</div>
+            </div>
+        </div>
+        <div class="dicenbtns">
+            <img id="diceImg" class="diceImg" src="images/dice-1.jpg" alt="">
+            <ul>
+                <li><button id="rollDice">Roll Dice</button></li>
+                <li><button id="hold">Hold</button></li>
+                <li><button id="newGame">New Game</button></li>
+            </ul>
+        </div>
+        <div id="player-2" class="player">
+            <div class="tsBlock">
+                <h1 class="tag2">Player 2</h1>
+                <div class="totalScore" id="p1TotalScore">###</div>
+            </div>
+            <div class="csBlock">
+                <h4>Current</h4>
+                <div class="currentScore" id="p1CurrentScore">0</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="script.js"></script>

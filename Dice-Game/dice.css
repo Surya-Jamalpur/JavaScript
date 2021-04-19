@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: 'Roboto'; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0; }
+
+.player {
+  background: #f2f2f2;
+  width: 496px;
+  height: 500px;
+  border-radius: 10px;
+  float: left;
+  padding: 50px 0 0 0;
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0.4;
+  border: solid 1px crimson;
+  transition: all 0.5s ease-in; }
+  .player .tsBlock, .player .csBlock {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: crimson;
+    color: #fff;
+    margin: 0 auto 40px auto; }
+    .player .tsBlock h1, .player .tsBlock .totalScore, .player .csBlock h1, .player .csBlock .totalScore {
+      margin: 50px 0 0 0;
+      padding: 0;
+      font-size: 50px;
+      float: left;
+      text-align: center;
+      width: 100%; }
+    .player .tsBlock .totalScore, .player .csBlock .totalScore {
+      font-size: 30px !important; }
+  .player .csBlock {
+    width: 120px;
+    height: 120px;
+    background: darkslateblue; }
+    .player .csBlock h4, .player .csBlock .currentScore {
+      margin: 30px 0 0 0;
+      padding: 0;
+      font-size: 24px;
+      float: left;
+      text-align: center;
+      width: 100%; }
+    .player .csBlock .currentScore {
+      margin: 5px 0 0 0;
+      font-size: 20px !important; }
+  .player.active {
+    width: 500px;
+    height: 500px;
+    opacity: 10; }
+    .player.active .tsBlock, .player.active .csBlock {
+      background: crimson; }
+    .player.active .csBlock {
+      background: forestgreen; }
+  .player.winner {
+    background: forestgreen;
+    border-color: forestgreen; }
+    .player.winner .tsBlock, .player.winner .csBlock {
+      background: white;
+      color: forestgreen; }
+    .player.winner .csBlock {
+      background: crimson;
+      color: white; }
+
+.dicenbtns {
+  width: 200px;
+  float: left;
+  margin-top: 200px;
+  text-align: center; }
+  .dicenbtns .diceImg {
+    width: 100px;
+    margin: 0px auto 50px auto;
+    opacity: 10;
+    transition: all 0.5s ease-in; }
+  .dicenbtns ul {
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    .dicenbtns ul li {
+      list-style: none; }
+      .dicenbtns ul li button {
+        background: green;
+        display: inline-block;
+        color: #fff;
+        font-size: 18px;
+        padding: 8px 20px;
+        margin-bottom: 12px;
+        margin: 5px 15px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: solid 1px green; }
+        .dicenbtns ul li button:hover, .dicenbtns ul li button:focus {
+          border: solid 1px green;
+          outline: none; }
+        .dicenbtns ul li button:disabled {
+          background: #f4f4f4;
+          cursor: not-allowed;
+          border: solid 1px #9d9d9d;
+          color: #4d4d4d; }
+
+.fadeout {
+  opacity: 0 !important; }
