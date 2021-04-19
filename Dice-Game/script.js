@@ -7,6 +7,7 @@ const playerOne = document.querySelector('#player-1');
 const playerTwo = document.querySelector('#player-2');
 const winnerTag1 = document.querySelector('.tag1');
 const winnerTag2 = document.querySelector('.tag2');
+const targetScore = document.querySelector('.tagetScore');
 
 const playerTwoTotalScore = document.querySelector('#p1TotalScore');
 const playerTwoCurrentScore = document.querySelector('#p1CurrentScore');
@@ -16,9 +17,8 @@ const rollDiceBtn = document.getElementById('rollDice');
 const holdBtn = document.getElementById('hold');
 const newGameBtn = document.getElementById('newGame');
 
-
 // starting conditions
-let totalScores, currentScore, activePlayer;
+let totalScores, currentScore, activePlayer, tagetScoreNum;
 
 const initialization = function () {
     totalScores = [0, 0];
@@ -54,7 +54,22 @@ const disableBtns = function () {
     holdBtn.disabled = true;
 
 }
+
+const fineshGame = function(){
+    if (activePlayer === 0) {
+        playerOne.classList.add('winner');
+        currentScore = 0;
+        winnerTag1.textContent = 'Winner';
+    } else {
+        playerTwo.classList.add('winner');
+        currentScore = 0;
+        winnerTag2.textContent = 'Winner';
+    }
+    disableBtns();
+    newGameBtn.disabled = false;
+}
 rollDiceBtn.addEventListener('click', function () {
+
     // Generating a random dice roll
     const currentDiceNo = Math.trunc(Math.random() * 6) + 1;
 
@@ -74,24 +89,24 @@ rollDiceBtn.addEventListener('click', function () {
 
 })
 holdBtn.addEventListener('click', function () {
-    totalScores[activePlayer] += currentScore
+    totalScores[activePlayer] += currentScore;
+    tagetScoreNum = Number(tagetScore.value);
     document.getElementById(`p${activePlayer}TotalScore`).textContent = totalScores[activePlayer];
-
-    if (totalScores[activePlayer] >= 10) {
-        //finesh the game
-        if (activePlayer === 0) {
-            playerOne.classList.add('winner');
-            currentScore = 0;
-            winnerTag1.textContent = 'Winner';
+    if(tagetScoreNum != 0) {
+        if (totalScores[activePlayer] >= tagetScoreNum) {
+            //finesh the game
+            fineshGame();
         } else {
-            playerTwo.classList.add('winner');
-            currentScore = 0;
-            winnerTag2.textContent = 'Winner';
-        }
-        disableBtns();
-        newGameBtn.disabled = false;
+            switchPlayer();
+        } 
+    } else {
+        if (totalScores[activePlayer] >= 20) {
+        //finesh the game
+        fineshGame();
     } else {
         switchPlayer();
     }
+    }
+    
 })
 newGameBtn.addEventListener('click', initialization);

@@ -90,7 +90,7 @@ body {
 .dicenbtns {
     width: 200px;
     float: left;
-    margin-top: 200px;
+    margin-top: 100px;
     text-align: center;
 
     .diceImg {
@@ -135,6 +135,29 @@ body {
             
         }
     }
+}
+.targetScore {
+    width: 100%;
+    max-width: 100px;
+    padding: 8px 0 8px 15px;
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-size: 16px;
+    color:blueviolet;
+    border-radius: 10px;
+    border: solid 2px #4d4d4d;
+}
+.targetLable {
+    font-size: 18px;
+    margin: 0 0 7px 0;
+    width: 100%;
+    float: left;
+}
+.defScore {
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    margin: 0 0 30px;
 }
 .fadeout {
     opacity: 0 !important;
